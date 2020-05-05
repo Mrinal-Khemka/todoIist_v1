@@ -1,0 +1,20 @@
+<%- include('header'); -%>
+  <div class="box" id="heading">
+    <h1><%=today%></h1>
+    <h1 id="txt"></h1>
+  </div>
+   <div class="box"> 
+    <%  for(var i=0;i < todo.length; i++){%>
+    <div class="item">
+       <input type="checkbox">
+        <p><%=todo[i]%></p>
+    </div>
+      <% } %>
+   
+    
+   <form action="/" method="post">
+       <input type="text" name="todoItem" placeholder=" New item" required autocomplete="off">
+       <button type="submit"  value=<%= today %> name="list" >+</button>
+   </form>
+   </div>
+   <%- include('footer') -%>
